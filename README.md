@@ -1,0 +1,28 @@
+- MERN Stack
+- Microservices
+- Redis
+- Langchain
+- LangGraph
+- RAG
+- Vector Database
+- Docker
+- AWS
+- Firebase
+- Redux Toolkit
+
+# CortexAI
+- backend
+    - gateway
+        - npm init -y
+        - npm i express mongoose nodemon dotenv morgan
+        - open package.json and update script as {"dev":"nodemon index.js"} and {"type":"module"}
+        - create index.js file
+    - services
+        - auth
+            - npm init -y
+            - npm i express mongoose nodemon dotenv express-http-proxy
+            - open package.json and update script as {"dev":"nodemon index.js"} and {"type":"module"}
+            - create index.js file 
+    - shared
+- frontend
+    - npm create vite@latest
