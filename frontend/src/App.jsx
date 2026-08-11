@@ -13,7 +13,7 @@
 // export default App
 
 import React from 'react'
-import {auth, googleProvider} from "../utils/firebase"
+import { auth, googleProvider } from "../utils/firebase"
 import api from "../utils/axios"
 import Home from './pages/Home'
 import { useEffect } from 'react'
@@ -23,15 +23,15 @@ import { setUserdata } from './redux/userSlice'
 
 function App() {
 
-const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
-useEffect(()=>{
-  const getUser = async () => {
-    const data = await getCurrentuser()
-    dispatch(setUserdata(data))
-  }
-  getUser()
-}, [])
+  useEffect(() => {
+    const getUser = async () => {
+      const data = await getCurrentuser()
+      dispatch(setUserdata(data))
+    }
+    getUser()
+  }, [])
 
   return (
     <>

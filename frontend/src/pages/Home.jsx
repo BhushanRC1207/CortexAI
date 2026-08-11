@@ -11,7 +11,7 @@ import Artifact from '../components/Artifact';
 
 function Home() {
 
-  const {userData} = useSelector(state=>state.user)
+  const { userData } = useSelector(state => state.user)
   // console.log(userData)
   const dispatch = useDispatch()
 
@@ -20,7 +20,7 @@ function Home() {
       const { data } = await api.post("/api/auth/login", { token })
       // console.log(data)
       dispatch(setUserdata(data))
-      
+
     } catch (error) {
       console.log(error)
     }
@@ -41,11 +41,11 @@ function Home() {
   return (
     <div className='h-screen flex bg-[#0d0f14] text-white overflow-hidden'>
 
-<SideBar/>
-<ChatArea/>
-<Artifact/>
+      <SideBar />
+      <ChatArea />
+      <Artifact />
 
-{!userData && <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur'>
+      {!userData && <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur'>
         <div className='w-[340px] bg-[#13151c] border border-white/[0.08] rounded-2xl p-7 flex flex-col gap-5'>
           <div className='flex flex-col gap-1'>
             <h2 className='text-[17px] font-semibold text-slate-100 tracking-tight'>Welcome to CortexAI</h2>
@@ -60,7 +60,7 @@ function Home() {
           </button>
         </div>
       </div>
-      }    
+      }
 
     </div>
   )
